@@ -37,7 +37,7 @@ export default function LoginPage() {
         }
         if (valid) {
             axios.defaults.withCredentials = true;
-            axios.post('/users/authenticate', userInfo)
+            axios.post('api/users/authenticate', userInfo)
                 .then((response) => {
                     if (response.data === "Invalid username or password") {
                         setPasswordErrorMessage("Invalid username or password");

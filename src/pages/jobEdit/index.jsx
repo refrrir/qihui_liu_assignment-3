@@ -20,7 +20,7 @@ export default function JobEdit() {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('/jobs/find/' + jobId)
+        axios.get('api/jobs/find/' + jobId)
             .then(response => {
                 setJobInfo(response.data[0]);
                 setIsLoading(false);
@@ -33,7 +33,7 @@ export default function JobEdit() {
         <div className="jobcreate-area">
             {!isLoading && <JobEditCard action={(jobData) => {
                 axios.defaults.withCredentials = true;
-                axios.put('/jobs/edit', jobData)
+                axios.put('api/jobs/edit', jobData)
                     .then(() => {
                         window.location.href = "../detail/" + jobData._id;
                     })
