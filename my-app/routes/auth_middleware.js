@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = function(req, res, next) {
     const token = req.cookies.jobBoardCookie;  
+    console.log(token);
     // Get the token out of the cookie and request.  This is made easy to ready by cookie-parser
     if (!token) {
         // If the cookie is missue, send back an error
