@@ -37,7 +37,7 @@ export default function RegisterPage() {
         }
         if (valid) {
             axios.defaults.withCredentials = true;
-            axios.post('/users/', userInfo)
+            axios.post('api/users/', userInfo)
                 .then(() => {
                     window.location.href="./";
                 })
