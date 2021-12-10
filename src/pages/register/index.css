@@ -1,0 +1,9 @@
+.register-area {
+    background-image: url(../../resources/background-homepage.jpeg); 
+    height: calc(100vh - 56px);
+    padding: 100px 30%;
+}
+.button-wrapper{
+    display: flex;
+    padding-top: 25px;
+}
