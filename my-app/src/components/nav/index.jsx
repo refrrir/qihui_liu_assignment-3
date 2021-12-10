@@ -31,12 +31,12 @@ export default function NavBar() {
                     {isLoggedIn ?
                         <Nav.Link onClick={() => {
                             axios.get('/users/logout')
-                            .then(() => {
-                                setUsername("");
-                                setIsLoggedIn(false);
-                                window.location.reload();
-                            })
-                            .catch(() => setIsLoggedIn(false));
+                                .then(() => {
+                                    setUsername("");
+                                    setIsLoggedIn(false);
+                                    window.location.reload();
+                                })
+                                .catch(() => setIsLoggedIn(false));
                         }}>Log out</Nav.Link>
                         : <React.Fragment>
                             <Nav.Link href="/login">Login</Nav.Link>
@@ -50,7 +50,7 @@ export default function NavBar() {
                                     id="nav-dropdown-example"
                                     title={username}
                                 >
-                                    <NavDropdown.Item href="../favorites">favorites</NavDropdown.Item>
+                                    <NavDropdown.Item onClick={() => window.location.href = "../favorites"}>favorites</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
