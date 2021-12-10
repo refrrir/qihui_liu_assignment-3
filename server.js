@@ -28,7 +28,8 @@ const corsOptions = {
     credentials: true, //included credentials as true
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(cookieParser());
 
@@ -49,7 +50,6 @@ app.get('*', function (req, res) {
     console.log("received request");
     res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-
 
 app.listen(8000, function () {
     console.log('Starting server');
