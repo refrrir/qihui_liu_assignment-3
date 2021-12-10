@@ -1,0 +1,19 @@
+.card-title{
+    color:rgb(82, 76, 76);
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+}
+.card-title:hover{
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card-descrption{
+    padding-top: 10px;
+}
+
+.card{
+    margin-bottom: 50px;
+}

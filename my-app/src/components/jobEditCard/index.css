@@ -1,0 +1,18 @@
+.card-title{
+    color:rgb(82, 76, 76);
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+}
+.card-title:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.card{
+    margin-bottom: 50px;
+}
+
+.jobcreate-area .btn{
+    margin-top: 30px;
+}

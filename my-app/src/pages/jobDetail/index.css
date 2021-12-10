@@ -1,0 +1,5 @@
+.jobdetail-area {
+    background-image: url(../../resources/background-homepage.jpeg); 
+    padding: 50px 20% 30px;
+    height: calc(100vh - 56px);
+}
