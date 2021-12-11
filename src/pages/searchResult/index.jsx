@@ -10,7 +10,7 @@ export default function SearchResultPage() {
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/jobs/findAll/' + searchQuery)
+        axios.get('/api/jobs/findAll/' + searchQuery)
             .then(response => setSearchResultState(response.data))
             .catch(error => console.log(error));
     }, [])

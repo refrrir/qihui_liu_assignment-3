@@ -8,7 +8,7 @@ export default function HeartButton(props) {
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/users/isFavorite/' + jobId)
+        axios.get('/api/users/isFavorite/' + jobId)
             .then((response) => {
                 setFavoriteState(response.data);
             })
@@ -28,13 +28,13 @@ export default function HeartButton(props) {
     } else {
         return <span onClick={() => {
             if (favoriteState === false) {
-                axios.post('api/users/addFavorite/' + jobId)
+                axios.post('/api/users/addFavorite/' + jobId)
                     .then(() => {
                         setFavoriteState(true);
                     })
                     .catch(error => console.log(error));
             } else {
-                axios.post('api/users/removeFavorite/' + jobId)
+                axios.post('/api/users/removeFavorite/' + jobId)
                     .then(() => {
                         setFavoriteState(false);
                     })

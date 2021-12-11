@@ -21,14 +21,14 @@ export default function JobDetail() {
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/jobs/find/' + jobId)
+        axios.get('/api/jobs/find/' + jobId)
             .then(response => setJobInfo(response.data[0]))
             .catch(error => console.log(error));
     }, []);
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/users/whoIsLoggedIn/')
+        axios.get('/api/users/whoIsLoggedIn/')
             .then(response => {
                 setUsername(response.data);
                 setIsLoggedIn(true);

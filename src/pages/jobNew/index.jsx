@@ -11,7 +11,7 @@ export default function JobNew() {
         <div className="jobcreate-area">
             <JobEditCard action={(jobData) => {
                 axios.defaults.withCredentials = true;
-                axios.post('api/jobs/create', jobData)
+                axios.post('/api/jobs/create', jobData)
                     .then(response => {
                         window.location.href = "./detail/" + response.data._id;
                     })
