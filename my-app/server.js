@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session')
 const MongoStore = require('connect-mongo');
 
-const mongoString = 'mongodb://127.0.0.1/job_board'
+const mongoString = 'mongodb+srv://refrrir:gdbsxwqj@cluster0.wom9o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect(mongoString, { useNewUrlParser: true })
 
 const mongoDB = mongoose.connection;
@@ -54,4 +54,3 @@ app.get('/*', function (req, res) {
 app.listen(process.env.PORT || 8000, () => {
     console.log('Starting server');
 });
-
