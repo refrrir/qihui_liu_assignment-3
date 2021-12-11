@@ -34,7 +34,7 @@ export default function JobCard(props) {
                             Edit
                         </Button>
                         <Button variant="danger" type="submit" onClick={() => {
-                            axios.delete('api/jobs/delete/' + _id)
+                            axios.delete('/api/jobs/delete/' + _id)
                                 .then(() => {
                                     window.location.href = "/";
                                 })

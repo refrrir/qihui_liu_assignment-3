@@ -10,7 +10,7 @@ export default function NavBar() {
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/users/whoIsLoggedIn/')
+        axios.get('/api/users/whoIsLoggedIn/')
             .then(response => {
                 console.log(response.data);
                 setUsername(response.data);
@@ -30,7 +30,7 @@ export default function NavBar() {
                 <Nav>
                     {isLoggedIn ?
                         <Nav.Link onClick={() => {
-                            axios.get('api/users/logout')
+                            axios.get('/api/users/logout')
                                 .then(() => {
                                     setUsername("");
                                     setIsLoggedIn(false);

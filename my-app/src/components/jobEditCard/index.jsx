@@ -23,7 +23,7 @@ export default function JobEditCard(props) {
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/users/whoIsLoggedIn/')
+        axios.get('/api/users/whoIsLoggedIn/')
             .then(response => {
                 onChange("postUser", response.data);
             })

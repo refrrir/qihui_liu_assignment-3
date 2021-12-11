@@ -8,7 +8,7 @@ export default function FavoritesPage() {
 
     useEffect(() => {
         axios.defaults.withCredentials = true;
-        axios.get('api/users/favorites')
+        axios.get('/api/users/favorites')
             .then(response => setfavoritesState(response.data))
             .catch(error => console.log(error));
     }, [])
