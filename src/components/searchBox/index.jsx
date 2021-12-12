@@ -11,8 +11,22 @@ export default function SearchBox() {
             className="me-2"
             aria-label="Search"
             value={searchState}
-            onChange={(e) => {setSearchState(e.target.value);}}
+            onChange={(e) => { setSearchState(e.target.value); }}
         />
-        <Button variant="outline-secondary" onClick={() => {window.location.href="/jobSearch/" + searchState}}>Search</Button>
+        <Button variant="outline-secondary"
+            onClick={() => {
+                if (!searchState.trim().length == 0) {
+                    window.location.href = "/jobSearch/" + searchState;
+                }
+            }}
+            onKeyUp={(e) => {
+                e.preventDefault();
+                if (e.key === "13") {
+                    if (!searchState.trim().length == 0) {
+                        window.location.href = "/jobSearch/" + searchState;
+                    }
+                }
+            }}
+        >Search</Button>
     </Form>
 }
