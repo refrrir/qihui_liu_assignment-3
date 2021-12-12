@@ -12,7 +12,6 @@ export default function NavBar() {
         axios.defaults.withCredentials = true;
         axios.get('/api/users/whoIsLoggedIn/')
             .then(response => {
-                console.log(response.data);
                 setUsername(response.data);
                 setIsLoggedIn(true);
             })

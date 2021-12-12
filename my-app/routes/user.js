@@ -116,8 +116,6 @@ router.get('/logout', function (request, response) {
 
 router.post('/authenticate', function (request, response) {
     let { username, password } = request.body;
-    console.log(username);
-    console.log(password);
     if (!username || !password) {
         return response.status(422).send('Must include both password and username');
     }
